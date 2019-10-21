@@ -1,5 +1,28 @@
 # Conan Papi Recipe
 
+## Usage
+
+### Add remote
+
+```
+conan remote add Papi https://api.bintray.com/conan/antoinewaugh/Papi
+```
+
+### Add dependency to conanfile.txt
+
+```
+//conanfile.txt
+
+[requires]
+Papi/5.7.0@Papi/stable
+
+[generators]
+cmake
+```
+
+----------------------
+
+
 ## Upload Instructions
 
 ```
