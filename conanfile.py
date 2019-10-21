@@ -17,11 +17,9 @@ class PapiConan(ConanFile):
         os.chdir("papi/src")
         autotools = AutoToolsBuildEnvironment(self)
         if self.options.shared:
-            autotools.configure(args="--with-shared-lib=yes")
-            autotools.configure(args="--with-static-lib=no")
+            autotools.configure(args=["--with-shared-lib=yes"])
         else:
-            autotools.configure(args="--with-static-lib=yes")
-            autotools.configure(args="--with-shared-lib=no")
+            autotools.configure(args=["--with-shared-lib=no"])
         autotools.make()
 
     def package(self):
