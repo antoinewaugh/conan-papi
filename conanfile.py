@@ -3,6 +3,7 @@ import os
 
 class PapiConan(ConanFile):
     name = "Papi"
+    version = "5.7.0"
     license = "MIT"
     url = "https://github.com/antoinewaugh/conan-papi"
     description = "The Performance Application Programming Interface (PAPI) provides tool designers and application engineers with a consistent interface and methodology for the use of low-level performance counter hardware"
