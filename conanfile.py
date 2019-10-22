@@ -15,6 +15,7 @@ class PapiConan(ConanFile):
     def build(self):
         os.chdir("papi/src")
         autotools = AutoToolsBuildEnvironment(self)
+        autotools.fpic = True
         autotools.configure(args=["--with-shared-lib=no"])
         autotools.make()
 
